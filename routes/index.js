@@ -27,7 +27,7 @@ router.post('/test',async(ctx,next)=>{
   }).with('username', 'birthyear').without('password', 'access_token');
  
   // Return result.
-  const result = Joi.validate(ctx.request.body, schema);
+  const result = Joi.validate(ctx.request.body, schema)
   // result.error === null -> valid
  
   // You can also pass a callback which will be called synchronously with the validation result.
